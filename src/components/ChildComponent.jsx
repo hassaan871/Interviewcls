@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import MyContext from "./Context/MyContext";
+import MyContext from "../Context/MyContext";
 import GrandChildComponent from "./GrandChildComponent";
 
 const ChildComponent = (props) => {

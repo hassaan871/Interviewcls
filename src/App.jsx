@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
-import ChildComponent from "./ChildComponent";
+import ChildComponent from "./components/ChildComponent";
 import MyContext from "./Context/MyContext";
-import GrandChildComponent from "./GrandChildComponent";
+import GrandChildComponent from "./components/GrandChildComponent";
 
 const App = () => {
 
