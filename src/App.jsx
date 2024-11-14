@@ -1,15 +1,27 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ChildComponent from "./ChildComponent";
 import MyContext from "./Context/MyContext";
+import GrandChildComponent from "./GrandChildComponent";
 
 const App = () => {
 
-  const [color, setColor] = useState('green')
+  // const {parentColor, setParentColor} = useContext(MyContext)
+  const [parentColor, setParentColor] = useState('')
+  const [childColor, setChildColor] = useState('green')
+  const [grandChildColor, setGrandChildColor] = useState('blue')
+
   return (
-   <MyContext.Provider value={{color, setColor}}>
-    <h2>Parent Component</h2>
-    <ChildComponent />
-   </MyContext.Provider>
+    <MyContext.Provider value={{ 
+        childColor, 
+        setChildColor, 
+        grandChildColor, 
+        setGrandChildColor, 
+        parentColor, 
+        setParentColor 
+      }}>
+      <h2 style={{ color: parentColor }}>Parent Component</h2>
+      <ChildComponent />
+    </MyContext.Provider>
   );
 }
 

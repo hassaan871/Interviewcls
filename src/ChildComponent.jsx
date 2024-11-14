@@ -1,14 +1,16 @@
 import { useContext, useState } from "react";
 import MyContext from "./Context/MyContext";
+import GrandChildComponent from "./GrandChildComponent";
 
 const ChildComponent = (props) => {
 
-    const {color, setColor} = useContext(MyContext);
+    const {childColor, setChildColor} = useContext(MyContext);
 
     
     return(
         <div>
-            <h2 style={{color: color}}>Child Component</h2>
+            <h2 style={{color: childColor}}>Child Component</h2>
+            <GrandChildComponent />
         </div>
     );
 }
